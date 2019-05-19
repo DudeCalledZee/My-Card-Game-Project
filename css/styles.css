@@ -27,10 +27,7 @@ img {
   width: calc(25% - 10px);
   position: relative;
   margin: 5px;
-}
-
-.back {
-  left: -15px;
+  transform-style: preserve-3d;
 }
 
 .back,
@@ -39,5 +36,18 @@ img {
   height: 100%;
   width: 100%;
   position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  transform: rotateY(180deg);
+  background: white;
+}
+
+.back {
   background: teal;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
 }
