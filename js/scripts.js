@@ -10,6 +10,13 @@ let secondCard;
 // Loop through list add listener
 cards.forEach(card => card.addEventListener('click', cardFlip));
 
+(function shuffle() {
+  cards.forEach(card => {
+    let randomCard = Math.floor(Math.random() * 12);
+    card.style.order = randomCard;
+  });
+})();
+
 // Card Flip Function
 function cardFlip() {
   // stops more then two cards opening
